@@ -1,0 +1,22 @@
+
+Product divisors
+Max. Marks 100
+Oz is in love with number theory, so he expects you to love it too and solve his problems. The current problem which has been given by Oz to you is in the form of an array. So, he has given you N integers i.e a1,a2,..,aN to deal with. You have to find the number of divisors of the product of all these integers.
+
+Input :
+The first line contains a single integer N. The second line contains N space seperated integers - a1,a2,..,aN.
+
+Output :
+Output a single integer — number of divisors of the product of all these integers. Since the answer can be very large, output it modulo 1000000007(109+7).
+
+Constraints :
+1 ≤ N ≤ 103.
+1 ≤ ai ≤ 106 where i=1, 2, 3 ... N
+
+Sample Input(Plaintext Link)
+ 2
+2 3
+Sample Output(Plaintext Link)
+ 4
+Explanation
+The product is 6 and it has 4 factors: 1, 2, 3, 6
