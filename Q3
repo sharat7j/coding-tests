@@ -1,8 +1,8 @@
 Given input array of integers in sorted order and target integer, find start and end position of target in input array.
 Sample-
-1. [1,2,3,8,8],target=8
+1. nums=[1,2,3,8,8],target=8
 sol: [3,4]
-2. [1,2,3,4],target=7
+2. nums=[1,2,3,4],target=7
 sol:[-1,-1]
 Execution time:O(log n)
 
