@@ -54,9 +54,9 @@ Code:Java
 			if (target == nums[mid]) {
 				pos = mid;
 				if (dir.equals("lower")) {
-					int x = findVal(start, mid - 1, nums, target, pos, dir);
-					if (x < pos)
-						pos = x;
+					int tmp = findVal(start, mid - 1, nums, target, pos, dir);
+					if (tmp < pos)
+						pos = tmp;
 				} else {
 					int x = findVal(mid + 1, end, nums, target, pos, dir);
 					if (x > pos)
@@ -64,15 +64,15 @@ Code:Java
 				}
 				return pos;
 			} else if (nums[mid] < target && dir.equals("lower")) {
-				int x = findVal(mid + 1, end, nums, target, pos, dir);
-				if (x < pos)
-					pos = x;
+				int tmp = findVal(mid + 1, end, nums, target, pos, dir);
+				if (tmp < pos)
+					pos = tmp ;
 
 			} else if (nums[mid] > target && dir.equals("higher")) {
 
-				int x = findVal(start, mid - 1, nums, target, pos, dir);
-				if (x > pos)
-					pos = x;
+				int tmp = findVal(start, mid - 1, nums, target, pos, dir);
+				if (tmp > pos)
+					pos = tmp;
 			}
 		}
 		return pos;
