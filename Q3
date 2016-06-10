@@ -37,10 +37,10 @@ Code:Java
 			}
 
 		}
-		int[] posTarget = new int[2];
-		posTarget[0] = startPos;
-		posTarget[1] = endPos;
-		return posTarget;
+		int[] targetRange = new int[2];
+		targetRange[0] = startPos;
+		targetRange[1] = endPos;
+		return targetRange;
 	}
 
 	public static int findVal(int start, int end, int[] nums, int target, int pos, String dir) {
