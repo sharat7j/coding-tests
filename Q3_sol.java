@@ -48,9 +48,9 @@ public static int[] searchRange(int[] nums, int target) {
 					if (tmp < pos)
 						pos = tmp;
 				} else {
-					int x = findVal(mid + 1, end, nums, target, pos, dir);
-					if (x > pos)
-						pos = x;
+					int tmp = findVal(mid + 1, end, nums, target, pos, dir);
+					if (tmp> pos)
+						pos = tmp;
 				}
 				return pos;
 			} else if (nums[mid] < target && dir.equals("lower")) {
