@@ -1,16 +1,17 @@
 import queue as Q
-def checkDryers(next_dryer_avail_time,time):
-	 for dryer_avail in next_dryer_avail_time:
+def checkDryers(dryer_avail_time,time):
+	 for dryer_avail in dryer_avail_time:
 	 	if (dryer_avail < time):
 	 		return dryer_avail
 	 return -1	
 
 def optimaltime(L,N,M,D,W):
-	next_dryer_avail_time=[0] * M
+	# have list  which is availability times of dryer
+	dryer_avail_time=[0] * M
 	dryerTimes=L
 	time=0
 	#put (Wi,i) in queue. pick one with least waiting time
-	#also have list Ai  which is availability of dryer
+	
 	q = Q.PriorityQueue()
 	for i in range(0 , N):
 		
@@ -21,17 +22,17 @@ def optimaltime(L,N,M,D,W):
 		time=curWasher[0]
 		q.put((curWasher[0]+W[curWasher[1]-1],curWasher[1]))
 		if(dryerTimes>0):
-			dryer=checkDryers(next_dryer_avail_time,time) 
+			dryer=checkDryers(dryer_avail_time,time) 
 			if (dryer is not -1):
-				next_dryer_avail_time[next_dryer_avail_time.index(dryer)]=dryer+D
+				dryer_avail_time[dryer_avail_time.index(dryer)]=dryer+D
 				time=time+D
 				dryerTimes=dryerTimes-1
 		L=L-1
 	if(dryerTimes>0):
 		while (dryerTimes>0):
-			dryer=checkDryers(next_dryer_avail_time,time) 
+			dryer=checkDryers(dryer_avail_time,time) 
 			if (dryer is not -1):
-				next_dryer_avail_time[next_dryer_avail_time.index(dryer)]=dryer+D
+				dryer_avail_time[dryer_avail_time.index(dryer)]=dryer+D
 				time=time+D
 				dryerTimes=dryerTimes-1
 	print (time)
