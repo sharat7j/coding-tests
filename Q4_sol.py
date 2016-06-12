@@ -6,8 +6,6 @@ def checkDryers(next_dryer_avail_time,time):
 	 return -1	
 
 def optimaltime(L,N,M,D,W):
-	print(L,N,M,D,W)
-	
 	next_dryer_avail_time=[0] * M
 	dryerTimes=L
 	time=0
