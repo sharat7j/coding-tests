@@ -10,7 +10,8 @@ import java.util.PriorityQueue;
 
 public class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        PriorityQueue<Integer> queue=new     PriorityQueue<Integer>();
+        //using min heap
+        PriorityQueue<Integer> queue=new PriorityQueue<Integer>();
         for(int i=0;i<lists.length;i++){
             ListNode list=lists[i];
             while(list!=null){
