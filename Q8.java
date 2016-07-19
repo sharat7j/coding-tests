@@ -73,11 +73,13 @@ if(array.subList(mid+1,array.size()).size()>=1){
     }
     
     public static TreeNode createSubTree(List<Integer> curList,TreeNode root){
+     //base case
     	if(curList.size()==1){
     		TreeNode node=new TreeNode(curList.get(curList.size()-1));
     		
     		return node;
     	}
+    	//other cases
     	int mid=0;
     	if(curList.size()%2==0){
     		mid=curList.size()/2-1;
