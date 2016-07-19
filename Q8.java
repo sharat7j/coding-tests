@@ -59,13 +59,8 @@ public class Solution {
         	mid=count/2-1;
         }else {
         	mid=count/2;
-        }
-        //reset
-        count =0;
         
-        currNode=head;
-        
-        
+        //get root with left and right subtrees
         TreeNode root=new TreeNode(array.get(mid));
 if(array.subList(0,mid).size()>=1){
         TreeNode left=createSubTree(array.subList(0,mid),root);
