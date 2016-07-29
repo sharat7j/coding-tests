@@ -3,7 +3,6 @@ import java.util.Map;
 
 class LRUCacheMap<K,V> extends LinkedHashMap<K,V>{
 	
-	
 	public void removeLRUEntry(){
 		for(Map.Entry<K, V> e:entrySet()){
 			remove(e.getKey());
@@ -18,6 +17,7 @@ public class LRUCache {
 	private int capacity=0;
 	private static int curSize=0;
 	private LRUCacheMap<Integer,Integer> cacheMap;
+	
 public LRUCache(int capacity) {
         this.capacity=capacity;
         cacheMap=new LRUCacheMap<Integer,Integer>();
@@ -41,15 +41,9 @@ public LRUCache(int capacity) {
     	if(cacheMap.size()==capacity){
     		cacheMap.removeLRUEntry();
     	}
-    	
-    	
-    	
+   
     	cacheMap.put(key, value);
-    	
-    	
-    	
-    	
-        
+
     }
     
     public int getCapacity(){
@@ -60,7 +54,5 @@ public LRUCache(int capacity) {
     public int getCurrentSize(){
     	return curSize;
     }
-    
-   
 
 }
