@@ -43,10 +43,10 @@
 
 # algo
 # 1)initialze i=0
-# 2) while f is not empty loop
+# 2) while f is not empty loop and i<len(a)
 # 3) if a[i]!=b[i] then replace a[i] with value in f if f contains b[i]
 # 4) else do nothing
-# 5) if i = a.size and f is not empty then replace a[i] with f[i] and decrement if i
+# 5) if i = a.size and f is not empty then replace a[i] with f[i] and decrement  i
 # 6) finally check how many elements are different in a and b
 # 7) O(n)
 
